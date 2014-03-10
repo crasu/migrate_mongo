@@ -214,16 +214,18 @@ def process_migrations(migrations):
         else:
             migration.save_migration_state(MIGRATION_STATUS_OK, '')
 
-
-def process(command_line_options):
+def connect_db(config):
     global db
-    
-    mongo_lc_all_workaround()
-    config = {'MONGODB_HOST':'localhost', 'MONGODB_PORT':27017, 'MONGODB_DBNAME': 'test'}
 
     client = MongoClient(config['MONGODB_HOST'], config['MONGODB_PORT'])
     db = client[config['MONGODB_DBNAME']]
 
+
+def process(command_line_options):
+    mongo_lc_all_workaround()
+    config = {'MONGODB_HOST':'localhost', 'MONGODB_PORT':27017, 'MONGODB_DBNAME': 'test'}
+
+    connect_db(config)
     init_logging()
 
     LOG.info('Migrating db: "{}"'.format(config['MONGODB_DBNAME']))
