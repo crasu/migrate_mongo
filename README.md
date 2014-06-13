@@ -1,8 +1,7 @@
 migrate_mongo
 =============
 
-Even if mongo is a schemaless db. We found it useful to migrate all of our collections, for bigger db chanes. 
-This script implements db maintain like migrations for mongo.
+Even if mongo is a schemaless db. We found it useful to migrate all of our collections for bigger db chanes so we do not have to deal with to many different cases in our code. This script implements db maintain like migrations for mongo.
 
 Install
 =============
