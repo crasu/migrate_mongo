@@ -9,7 +9,7 @@ pip install requirements.txt
 
 Running
 =============
-* Change the config dict in the script to contain you db credentials
+* Change the config dict in the script to contain your db credentials
 * Put your migration scripts into the same dir as the python files
 * Execute the script 
     
