@@ -5,7 +5,7 @@ Even if mongo is a schemaless db. We found it useful to migrate all of our colle
 
 Install
 =============
-pip install requirements.txt
+pip install -r requirements.txt
 
 Running
 =============
